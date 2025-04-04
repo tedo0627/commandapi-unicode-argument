@@ -16,6 +16,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             artifactId = project.name
+            artifact(tasks.jar)
         }
     }
 }

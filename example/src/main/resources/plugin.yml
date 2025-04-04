@@ -1,0 +1,3 @@
+name: commandapi-unicode-argument-example
+main: net.tedo0627.commandapi.example.ExamplePlugin
+version: 1.0.0

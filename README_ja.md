@@ -22,10 +22,10 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.jorel:commandapi-bukkit-shade:10.0.0")
-    implementation("dev.jorel:commandapi-bukkit-kotlin:10.0.0")
-    implementation("com.github.tedo0627.commandapi-unicode-argument:core:1.0.0")
-    implementation("com.github.tedo0627.commandapi-unicode-argument:kotlin:1.0.0")
+    implementation("dev.jorel:commandapi-paper-shade:12.0.0")
+    implementation("dev.jorel:commandapi-kotlin-paper:12.0.0") // optional
+    implementation("com.github.tedo0627.commandapi-unicode-argument:core:1.1.0")
+    implementation("com.github.tedo0627.commandapi-unicode-argument:kotlin:1.1.0") // optional
 }
 ```
 

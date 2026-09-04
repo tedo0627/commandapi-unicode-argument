@@ -20,8 +20,6 @@ dependencies {
 
     implementation("dev.jorel:commandapi-paper-shade:12.0.0")
     implementation("dev.jorel:commandapi-kotlin-paper:12.0.0")
-//    implementation("dev.jorel:commandapi-spigot-shade:12.0.0")
-//    implementation("dev.jorel:commandapi-kotlin-spigot:12.0.0")
     implementation(project(":core"))
     implementation(project(":kotlin"))
 }

@@ -1,12 +1,14 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    kotlin("jvm") version "2.0.21"
-    id("io.papermc.paperweight.userdev") version "1.7.7"
-    id("xyz.jpenilla.run-paper") version "2.3.1"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    kotlin("jvm") version "2.4.10"
+    id("io.papermc.paperweight.userdev") version "2.0.0-beta.21"
+    id("xyz.jpenilla.run-paper") version "3.1.0"
+    id("com.gradleup.shadow") version "9.6.1"
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(25))
 }
 
 repositories {
@@ -14,25 +16,29 @@ repositories {
 }
 
 dependencies {
-    paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("26.2.build.+")
 
-    implementation("dev.jorel:commandapi-bukkit-shade:10.0.0")
-    implementation("dev.jorel:commandapi-bukkit-kotlin:10.0.0")
+    implementation("dev.jorel:commandapi-paper-shade:12.0.0")
+    implementation("dev.jorel:commandapi-kotlin-paper:12.0.0")
+//    implementation("dev.jorel:commandapi-spigot-shade:12.0.0")
+//    implementation("dev.jorel:commandapi-kotlin-spigot:12.0.0")
     implementation(project(":core"))
     implementation(project(":kotlin"))
 }
 
 tasks {
-    assemble {
-        dependsOn(reobfJar)
-    }
-
     compileJava {
         options.encoding = Charsets.UTF_8.name()
-        options.release.set(17)
+        options.release.set(25)
+    }
+
+    compileKotlin {
+        compilerOptions.jvmTarget.set(JvmTarget.JVM_25)
     }
 
     shadowJar {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
         fun reloc(pkg: String) = relocate(pkg, "net.tedo0627.commandapi-unicode-args-example.dependency.$pkg")
 
         reloc("dev.jorel")

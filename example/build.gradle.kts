@@ -16,8 +16,8 @@ repositories {
 dependencies {
     paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
 
-    implementation("dev.jorel:commandapi-bukkit-shade:10.0.0")
-    implementation("dev.jorel:commandapi-bukkit-kotlin:10.0.0")
+    implementation("dev.jorel:commandapi-bukkit-shade:10.1.2")
+    implementation("dev.jorel:commandapi-bukkit-kotlin:10.1.2")
     implementation(project(":core"))
     implementation(project(":kotlin"))
 }

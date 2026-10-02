@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("dev.jorel:commandapi-spigot-core:12.0.0")
+    compileOnly("dev.jorel:commandapi-spigot-core:12.1.0")
     compileOnly(project(":core"))
 }
 

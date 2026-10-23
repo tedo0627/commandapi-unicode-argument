@@ -18,8 +18,8 @@ repositories {
 dependencies {
     paperweight.paperDevBundle("26.2.build.+")
 
-    implementation("dev.jorel:commandapi-paper-shade:12.0.0")
-    implementation("dev.jorel:commandapi-kotlin-paper:12.0.0")
+    implementation("dev.jorel:commandapi-paper-shade:12.1.0")
+    implementation("dev.jorel:commandapi-kotlin-paper:12.1.0")
     implementation(project(":core"))
     implementation(project(":kotlin"))
 }
